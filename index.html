@@ -16,6 +16,7 @@
 
       body {
         font-family: "Poppins", sans-serif;
+        line-height: 1.6;
       }
 
       html {
@@ -27,14 +28,12 @@
       }
 
       /* TRANSITION */
-      a,
-      .btn {
+      a, .btn {
         transition: all 300ms ease;
       }
 
       /* DESKTOP NAV */
-      nav,
-      .nav-links {
+      nav, .nav-links {
         display: flex;
       }
 
@@ -94,7 +93,7 @@
         width: 100%;
         height: 2px;
         background-color: black;
-        transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       .menu-links {
@@ -105,7 +104,9 @@
         width: fit-content;
         max-height: 0;
         overflow: hidden;
-        transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
       }
 
       .menu-links a {
@@ -115,7 +116,7 @@
         font-size: 1.5rem;
         color: black;
         text-decoration: none;
-        transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
 
       .menu-links li {
@@ -140,8 +141,7 @@
 
       /* SECTIONS */
       section {
-        padding-top: 4vh;
-        height: 96vh;
+        padding: 4vh 0;
         margin: 0 10rem;
         box-sizing: border-box;
         min-height: fit-content;
@@ -149,6 +149,7 @@
 
       .section-container {
         display: flex;
+        gap: 4rem;
       }
 
       /* PROFILE SECTION */
@@ -157,6 +158,7 @@
         justify-content: center;
         gap: 5rem;
         height: 80vh;
+        align-items: center;
       }
 
       .section__pic-container {
@@ -167,9 +169,9 @@
       }
 
       .section__pic-container img {
+        border-radius: 50%;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
         object-fit: cover;
       }
 
@@ -184,16 +186,20 @@
 
       .section__text__p1 {
         text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
       }
 
       .section__text__p2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+        color: rgb(53, 53, 53);
       }
 
       .title {
         font-size: 3rem;
         text-align: center;
+        margin-bottom: 1rem;
       }
 
       #socials-container {
@@ -207,22 +213,11 @@
       .icon {
         cursor: pointer;
         height: 2rem;
-        width: 2rem;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        transition: transform 0.3s ease;
       }
 
-      .linkedin-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230077b5'%3E%3Cpath d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/%3E%3C/svg%3E");
-      }
-
-      .github-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
-      }
-
-      .email-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.906L12 9.547l9.458-5.726h.906c.904 0 1.636.732 1.636 1.636z'/%3E%3C/svg%3E");
+      .icon:hover {
+        transform: scale(1.1);
       }
 
       /* BUTTONS */
@@ -230,29 +225,20 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
+        margin: 2rem 0;
       }
 
       .btn {
         font-weight: 600;
         transition: all 300ms ease;
-        padding: 1rem;
-        width: 8rem;
+        padding: 1rem 2rem;
         border-radius: 2rem;
+        border: none;
         cursor: pointer;
+        font-size: 1rem;
       }
 
-      .btn-color-1,
-      .btn-color-2 {
-        border: rgb(53, 53, 53) 0.1rem solid;
-      }
-
-      .btn-color-1:hover,
-      .btn-color-2:hover {
-        cursor: pointer;
-      }
-
-      .btn-color-1,
-      .btn-color-2:hover {
+      .btn-color-1 {
         background: rgb(53, 53, 53);
         color: white;
       }
@@ -263,64 +249,110 @@
 
       .btn-color-2 {
         background: none;
+        color: rgb(53, 53, 53);
+        border: rgb(53, 53, 53) 0.1rem solid;
       }
 
       .btn-color-2:hover {
-        border: rgb(255, 255, 255) 0.1rem solid;
+        background: rgb(53, 53, 53);
+        color: white;
       }
 
       /* ABOUT SECTION */
       #about {
         position: relative;
-        height: auto;
-        min-height: 96vh;
+        padding: 6vh 0;
+      }
+
+      .about-main-container {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .about-left {
+        flex: 1;
+      }
+
+      .about-right {
+        flex: 2;
       }
 
       .about-containers {
+        display: flex;
         gap: 2rem;
         margin-bottom: 2rem;
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .about-details-container {
-        justify-content: center;
-        flex-direction: column;
-        display: flex;
-      }
-
-      .arrow {
-        position: absolute;
-        right: -5rem;
-        bottom: 2.5rem;
-        height: 2rem;
-        width: 2rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       .details-container {
-        padding: 1.5rem;
+        padding: 2rem;
         flex: 1;
         background: white;
         border-radius: 2rem;
-        border: rgb(53, 53, 53) 0.1rem solid;
-        border-color: rgb(163, 163, 163);
+        border: rgb(163, 163, 163) 0.1rem solid;
         text-align: center;
-        min-width: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .details-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .details-container h3 {
+        margin: 1rem 0 0.5rem 0;
+        color: rgb(53, 53, 53);
       }
 
       .text-container {
-        margin-top: 2rem;
-        text-align: justify;
-        line-height: 1.6;
+        background: rgb(250, 250, 250);
+        padding: 2rem;
+        border-radius: 2rem;
+        border: rgb(163, 163, 163) 0.1rem solid;
+        margin-bottom: 2rem;
       }
 
-      .achievements-container {
-        margin-top: 2rem;
+      .text-container p {
+        text-align: justify;
+        line-height: 1.8;
+      }
+
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .education-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border: rgb(163, 163, 163) 0.1rem solid;
+      }
+
+      .education-item h4 {
+        color: rgb(53, 53, 53);
+        margin-bottom: 0.5rem;
+      }
+
+      .education-item p {
+        font-size: 0.9rem;
+        margin: 0.3rem 0;
+      }
+
+      .achievements-container, .volunteer-container {
+        background: rgb(250, 250, 250);
+        padding: 2rem;
+        border-radius: 2rem;
+        border: rgb(163, 163, 163) 0.1rem solid;
+        margin-bottom: 2rem;
+      }
+
+      .achievements-container h3, .volunteer-container h3 {
+        color: rgb(53, 53, 53);
+        margin-bottom: 1rem;
+        text-align: center;
       }
 
       .achievements-list {
@@ -329,37 +361,36 @@
       }
 
       .achievements-list li {
-        background: rgb(250, 250, 250);
-        margin: 0.5rem 0;
+        background: white;
+        margin: 0.8rem 0;
         padding: 1rem;
         border-radius: 1rem;
-        border: rgb(163, 163, 163) 0.1rem solid;
+        border-left: 4px solid rgb(53, 53, 53);
       }
 
-      /* PERSONAL STATEMENT SECTION */
-      #personal-statement {
-        position: relative;
-        background: linear-gradient(135deg, rgb(250, 250, 250), rgb(240, 240, 240));
-        margin: 0 5rem;
-        padding: 3rem 5rem;
-        border-radius: 2rem;
+      .volunteer-item {
+        background: white;
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border-left: 4px solid rgb(53, 53, 53);
       }
 
-      .statement-container {
-        max-width: 1000px;
-        margin: 0 auto;
+      .volunteer-item h4 {
+        color: rgb(53, 53, 53);
+        margin-bottom: 0.5rem;
       }
 
-      .statement-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        text-align: justify;
-        color: rgb(60, 60, 60);
+      .arrow {
+        position: absolute;
+        right: -5rem;
+        bottom: 2.5rem;
       }
 
       /* EXPERIENCE SECTION */
       #experience {
         position: relative;
+        padding: 6vh 0;
       }
 
       .experience-sub-title {
@@ -367,6 +398,7 @@
         font-weight: 600;
         font-size: 1.75rem;
         margin-bottom: 2rem;
+        text-align: center;
       }
 
       .experience-details-container {
@@ -376,54 +408,80 @@
       }
 
       .article-container {
-        display: flex;
-        text-align: initial;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 2.5rem;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       article {
         display: flex;
-        width: 10rem;
-        justify-content: space-around;
-        gap: 0.5rem;
         align-items: center;
+        gap: 0.8rem;
+        padding: 1rem;
+        background: white;
+        border-radius: 1rem;
+        border: rgb(163, 163, 163) 0.1rem solid;
+        transition: transform 0.3s ease;
+      }
+
+      article:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       article .icon {
         cursor: default;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300b4d8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3C/svg%3E");
+        height: 1.5rem;
+      }
+
+      article h3 {
+        color: rgb(53, 53, 53);
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      article p {
+        font-size: 0.9rem;
+        margin: 0;
+        color: rgb(85, 85, 85);
       }
 
       /* PROJECTS SECTION */
       #projects {
         position: relative;
+        padding: 6vh 0;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
       }
 
       .color-container {
         border-color: rgb(163, 163, 163);
         background: rgb(250, 250, 250);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .color-container:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       }
 
       .project-img {
         border-radius: 2rem;
-        width: 90%;
+        width: 100%;
         height: 200px;
         object-fit: cover;
-        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
       }
 
       .project-title {
-        margin: 1rem;
+        margin: 1rem 0;
         color: black;
+        text-align: center;
       }
 
       .project-btn {
@@ -436,48 +494,59 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        height: 70vh;
+        padding: 6vh 0;
       }
 
       .contact-info-upper-container {
         display: flex;
         justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
         border-radius: 2rem;
-        border: rgb(53, 53, 53) 0.1rem solid;
-        border-color: rgb(163, 163, 163);
+        border: rgb(163, 163, 163) 0.1rem solid;
         background: rgb(250, 250, 250);
         margin: 2rem auto;
-        padding: 0.5rem;
-        flex-wrap: wrap;
-        gap: 1rem;
+        padding: 2rem;
+        max-width: 800px;
       }
 
       .contact-info-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
-        margin: 1rem;
+        gap: 1rem;
+        padding: 1rem;
+        background: white;
+        border-radius: 1rem;
+        transition: transform 0.3s ease;
+        min-width: 250px;
+      }
+
+      .contact-info-container:hover {
+        transform: translateY(-5px);
       }
 
       .contact-info-container p {
-        font-size: larger;
+        font-size: 1rem;
+        margin: 0;
       }
 
       .contact-icon {
         cursor: default;
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 2rem;
       }
 
       /* FOOTER SECTION */
       footer {
-        height: 26vh;
         margin: 0 1rem;
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid rgb(163, 163, 163);
       }
 
       footer p {
         text-align: center;
+        margin-top: 1rem;
       }
 
       /* RESPONSIVE DESIGN */
@@ -489,8 +558,7 @@
         .about-containers {
           flex-wrap: wrap;
         }
-        #contact,
-        #projects {
+        #contact, #projects {
           height: fit-content;
         }
       }
@@ -502,32 +570,25 @@
         #hamburger-nav {
           display: flex;
         }
-        #experience,
-        .experience-details-container {
+        #experience, .experience-details-container {
           margin-top: 2rem;
         }
-        #profile,
-        .section-container {
+        #profile, .section-container {
           display: block;
         }
         .arrow {
           display: none;
         }
-        section,
-        .section-container {
-          height: fit-content;
-        }
         section {
           margin: 0 5%;
-        }
-        #personal-statement {
-          margin: 0 2rem;
-          padding: 2rem 3rem;
         }
         .section__pic-container {
           width: 275px;
           height: 275px;
           margin: 0 auto 2rem;
+        }
+        .about-main-container {
+          flex-direction: column;
         }
         .about-containers {
           margin-top: 0;
@@ -535,8 +596,7 @@
       }
 
       @media screen and (max-width: 600px) {
-        #contact,
-        footer {
+        #contact, footer {
           height: 40vh;
         }
         #profile {
@@ -550,16 +610,14 @@
           height: fit-content;
           margin-bottom: 2rem;
         }
-        .about-containers,
-        .contact-info-upper-container,
-        .btn-container {
+        .about-containers, .contact-info-upper-container, .btn-container {
           flex-wrap: wrap;
         }
         .contact-info-container {
           margin: 0;
+          min-width: 200px;
         }
-        .contact-info-container p,
-        .nav-links li a {
+        .contact-info-container p, .nav-links li a {
           font-size: 1rem;
         }
         .experience-sub-title {
@@ -584,15 +642,14 @@
         .title {
           font-size: 2rem;
         }
-        .text-container {
-          text-align: justify;
+        .projects-grid {
+          grid-template-columns: 1fr;
         }
-        #personal-statement {
-          margin: 0 1rem;
-          padding: 2rem;
+        .education-grid {
+          grid-template-columns: 1fr;
         }
-        .statement-text {
-          font-size: 1rem;
+        .article-container {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -625,17 +682,20 @@
         </div>
       </div>
     </nav>
-
+    
     <section id="profile">
       <div class="section__pic-container">
-        <div style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-weight: bold;">AR</div>
+        <img src="./assets/profile-pic.png" alt="Adarsh Reddy profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Adarsh Reddy</h1>
-        <p class="section__text__p2">Data Science and ML Enthusiast</p>
+        <p class="section__text__p2">Data Science & AI Enthusiast</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
             Download CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -643,8 +703,18 @@
           </button>
         </div>
         <div id="socials-container">
-          <div class="icon linkedin-icon" onclick="location.href='https://www.linkedin.com/in/adarsh-reddy-patil-a770a02a3/'"></div>
-          <div class="icon github-icon" onclick="location.href='https://github.com/Adarshreddy99/'"></div>
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/adarsh-reddy-patil-a770a02a3/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Adarshreddy99/'"
+          />
         </div>
       </div>
     </section>
@@ -652,171 +722,225 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
+      
+      <div class="about-main-container">
+        <div class="about-left">
           <div class="about-containers">
             <div class="details-container">
-              <div class="icon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23333\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\'/%3E%3Crect x=\'8\' y=\'2\' width=\'8\' height=\'4\' rx=\'1\' ry=\'1\'/%3E%3C/svg%3E'); margin: 0 auto 1rem;"></div>
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Volunteer Experience</h3>
-              <p>Core Member at GDG (AI/ML/DS) & Matrix Club (ML/DL). Led sessions on LLMs, transformers, and foundational ML mathematics.</p>
-            </div>
-            <div class="details-container">
-              <div class="icon" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23333\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\'/%3E%3Cpath d=\'M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\'/%3E%3C/svg%3E'); margin: 0 auto 1rem;"></div>
-              <h3>Education</h3>
-              <p>B.Tech. AI & Data Science - IIIT Sri City (CGPA: 9.17)<br/>
-              12th - RS Hukkerikar PU College (85%)<br/>
-              10th - JSS CBSE School (97%)</p>
+              <p>Core Member - GDG & Matrix Club</p>
             </div>
           </div>
           
+          <div class="education-grid">
+            <div class="education-item">
+              <h4>B.Tech AI & Data Science</h4>
+              <p>IIIT Sri City</p>
+              <p><strong>CGPA: 9.17</strong></p>
+              <p>Aug 2023 - Present</p>
+            </div>
+            <div class="education-item">
+              <h4>12th Grade</h4>
+              <p>RS Hukkerikar PU College</p>
+              <p><strong>85%</strong></p>
+            </div>
+            <div class="education-item">
+              <h4>10th Grade</h4>
+              <p>JSS CBSE School</p>
+              <p><strong>97%</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="text-container">
+            <h3 style="color: rgb(53, 53, 53); margin-bottom: 1rem; text-align: center;">Personal Statement</h3>
+            <p>
+              I'm a passionate data science student with a deep fascination for transforming complex data into actionable insights and developing intelligent systems that solve real-world problems. My journey in AI and Data Science has been driven by curiosity and hands-on experience in machine learning, deep learning, and natural language processing.
+            </p>
+            <p style="margin-top: 1rem;">
+              My expertise spans building end-to-end ML/DL solutions, from data preprocessing and feature engineering to deploying production-ready models. I'm particularly interested in LLMs, RAG systems, and agentic AI applications. Through various projects, I've gained proficiency in PyTorch, LangChain, Hugging Face, and modern ML frameworks, always focusing on creating scalable and efficient solutions.
+            </p>
+            <p style="margin-top: 1rem;">
+              I believe in continuous learning and applying cutting-edge research to practical applications. My goal is to leverage AI and data science to create meaningful impact, whether through predictive modeling, automation, or building intelligent systems that enhance human capabilities.
+            </p>
+          </div>
+
           <div class="achievements-container">
-            <h3 style="text-align: center; margin-bottom: 1rem; color: rgb(85, 85, 85);">Achievements</h3>
+            <h3>🏆 Achievements</h3>
             <ul class="achievements-list">
-              <li>🏆 Neural Odyssey Hackathon - 3rd place out of 26 teams in ML/DL/NLP focused competition</li>
-              <li>🎯 Perfect 10.0 SGPA in 4th semester, excelling in Deep Learning and Data Analytics</li>
-              <li>🚀 Built and showcased ML-based game during Uthkrishta tech fest hackathon</li>
+              <li><strong>Neural Odyssey Hackathon</strong> - Secured 3rd place out of 26 teams in ML/DL/NLP focused event with heart stroke prediction project</li>
+              <li><strong>Academic Excellence</strong> - Scored perfect 10.0 SGPA in 4th semester, excelling in Deep Learning and Data Analytics</li>
+              <li><strong>Leadership Role</strong> - Core member in prestigious GDG and Matrix clubs, leading ML/AI initiatives</li>
             </ul>
           </div>
 
-          <div class="text-container">
-            <p>
-              I'm a passionate data science student with a strong foundation in artificial intelligence, machine learning, and data engineering. 
-              Currently pursuing B.Tech in AI & Data Science at IIIT Sri City with a CGPA of 9.17, I am dedicated to transforming raw data into meaningful insights.
-              Through hands-on projects involving deep learning, NLP, and LLMs, I've developed expertise in building end-to-end solutions for prediction, 
-              automation, and real-world applications. My experience spans from traditional ML algorithms to cutting-edge technologies like LangGraph, 
-              RAG systems, and parameter-efficient fine-tuning techniques.
-            </p>
+          <div class="volunteer-container">
+            <h3>🤝 Volunteer Experience</h3>
+            <div class="volunteer-item">
+              <h4>Core Member - GDG (Google Developer Groups)</h4>
+              <p>AI/ML/DS Division: Built and showcased ML-based game during Uthkrishta tech fest hackathon. Organized workshops and tech talks on latest AI trends.</p>
+            </div>
+            <div class="volunteer-item">
+              <h4>Core Member - Matrix Club</h4>
+              <p>ML/DL Division: Led comprehensive sessions on LLMs covering transformers, attention mechanisms, and practical use cases. Conducted foundational workshops on ML mathematics including statistics, probability, and linear algebra.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="arrow" onclick="location.href='./#personal-statement'"></div>
-    </section>
-
-    <section id="personal-statement">
-      <p class="section__text__p1">Learn More</p>
-      <h1 class="title">Personal Statement</h1>
-      <div class="statement-container">
-        <div class="statement-text">
-          <p style="margin-bottom: 1.5rem;">
-            As a Data Science enthusiast specializing in deep learning, NLP, and Large Language Models, I am driven by the transformative potential of artificial intelligence. 
-            My journey in the field has been marked by a deep fascination with how machines can understand, learn, and generate insights from complex data patterns.
-          </p>
-          
-          <p style="margin-bottom: 1.5rem;">
-            My expertise spans across multiple domains within AI and ML. I have hands-on experience with advanced architectures including LangGraph-driven chatbots, 
-            Retrieval-Augmented Generation (RAG) systems, and parameter-efficient fine-tuning techniques like QLoRA and LoRA. Through projects like MemoryBot and 
-            Rag-Phi-Eval, I've explored the cutting edge of conversational AI, implementing dynamic memory systems and evaluating multiple RAG pipeline architectures.
-          </p>
-          
-          <p style="margin-bottom: 1.5rem;">
-            What sets me apart is my ability to bridge theoretical knowledge with practical implementation. I'm proficient in PyTorch, Hugging Face Transformers, 
-            LangChain, and various data analysis libraries. My technical toolkit includes cloud platforms like AWS, containerization with Docker, and MLOps practices 
-            using MLflow and DVC. This comprehensive skill set enables me to build robust, scalable solutions from research to production.
-          </p>
-          
-          <p style="margin-bottom: 1.5rem;">
-            Beyond technical skills, I am passionate about knowledge sharing and community building. As a core member of both GDG's AI/ML/DS group and the Matrix Club, 
-            I regularly conduct sessions on transformer architectures, attention mechanisms, and foundational mathematics for machine learning. This experience has honed 
-            my ability to communicate complex technical concepts clearly and effectively.
-          </p>
-          
-          <p>
-            My goal is to contribute to the advancement of AI technology while ensuring its responsible development and deployment. I am particularly interested in 
-            creating AI systems that can understand context, maintain long-term memory, and provide meaningful assistance to users across various domains. 
-            Through continuous learning and hands-on experimentation, I strive to push the boundaries of what's possible in the intersection of artificial intelligence and human needs.
-          </p>
-        </div>
-      </div>
-      <div class="arrow" onclick="location.href='./#experience'"></div>
+      
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
     </section>
 
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Tech Stack & Skills</h1>
+      <h1 class="title">Technical Skills & Expertise</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Data Analytics</h2>
+            <h2 class="experience-sub-title">Programming & Data Analysis</h2>
             <div class="article-container">
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Python</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>SQL</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>C</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
-                  <h3>Visualization</h3>
-                  <p>Intermediate</p>
+                  <h3>NumPy & Pandas</h3>
+                  <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Statistics</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Data Visualization</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
+          
           <div class="details-container">
-            <h2 class="experience-sub-title">Machine & Deep Learning</h2>
+            <h2 class="experience-sub-title">ML/DL & AI Frameworks</h2>
             <div class="article-container">
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>PyTorch</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
-                <div>
-                  <h3>TensorFlow</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Scikit-Learn</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>TensorFlow</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>LangChain</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
-                  <h3>Transformers</h3>
+                  <h3>Hugging Face</h3>
                   <p>Advanced</p>
                 </div>
               </article>
               <article>
-                <div class="icon"></div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
-                  <h3>Pandas & SciPy</h3>
+                  <h3>LangGraph</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Tools & Platforms</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Git & GitHub</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>AWS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Docker</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Tableau/PowerBI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>MLflow & DVC</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>VS Code</h3>
                   <p>Advanced</p>
                 </div>
               </article>
@@ -824,17 +948,26 @@
           </div>
         </div>
       </div>
-      <div class="arrow" onclick="location.href='./#projects'"></div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
+        <div class="projects-grid">
           <div class="details-container color-container">
             <div class="article-container">
-              <div class="project-img">Future Flow ML</div>
+              <img
+                src="./assets/project-1.png"
+                alt="Future Flow ML Project"
+                class="project-img"
+              />
             </div>
             <h2 class="experience-sub-title project-title">Future Flow ML</h2>
             <div class="btn-container">
@@ -846,9 +979,14 @@
               </button>
             </div>
           </div>
+          
           <div class="details-container color-container">
             <div class="article-container">
-              <div class="project-img">Car Price Predictor</div>
+              <img
+                src="./assets/project-2.png"
+                alt="Car Price Predictor DL Project"
+                class="project-img"
+              />
             </div>
             <h2 class="experience-sub-title project-title">Car Price Predictor DL</h2>
             <div class="btn-container">
@@ -860,9 +998,14 @@
               </button>
             </div>
           </div>
+
           <div class="details-container color-container">
             <div class="article-container">
-              <div class="project-img">Employee Attrition</div>
+              <img
+                src="./assets/project-3.png"
+                alt="Employee Attrition Prediction Project"
+                class="project-img"
+              />
             </div>
             <h2 class="experience-sub-title project-title">Employee Attrition Prediction</h2>
             <div class="btn-container">
@@ -876,7 +1019,12 @@
           </div>
         </div>
       </div>
-      <div class="arrow" onclick="location.href='./#contact'"></div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
 
     <section id="contact">
@@ -884,16 +1032,28 @@
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <div class="icon contact-icon email-icon"></div>
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon"
+          />
           <p><a href="mailto:adarshreddywrko@gmail.com">adarshreddywrko@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <div class="icon contact-icon linkedin-icon"></div>
-          <p><a href="https://www.linkedin.com/in/adarsh-reddy-patil-a770a02a3/">LinkedIn</a></p>
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/adarsh-reddy-patil-a770a02a3/" target="_blank">LinkedIn</a></p>
         </div>
         <div class="contact-info-container">
-          <div class="icon contact-icon github-icon"></div>
-          <p><a href="https://github.com/Adarshreddy99/">GitHub</a></p>
+          <img
+            src="./assets/github.png"
+            alt="GitHub icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://github.com/Adarshreddy99/" target="_blank">GitHub</a></p>
         </div>
       </div>
     </section>
